@@ -3,7 +3,7 @@
     margin: 0 auto;
   }
   
-  .container-cadastro {
+  .container-a {
     width: 100%;
     min-height: 100vh;
     margin-left: 20vh;
@@ -13,13 +13,4 @@
     justify-content: left;
     padding: 15px;
     background-color: white;
-  }
-  
-  .wrap-cadastro {
-    width: 390px;
-    background-color: #F5F7F8;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 77px 55px 33px 55px;
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0);
   }

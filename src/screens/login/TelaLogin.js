@@ -1,5 +1,10 @@
-import "./TelaLoginStyle.css";
+import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import '../../components/Input/InputGlobal.css'
+import '../../components/Button/ButtonGlobal.css'
+import '../../components/Layout/LayoutForm.css'
+import '../../components/Layout/LayoutContainer.js'
+import LayoutContainer from "../../components/Layout/LayoutContainer.js";
 
 function TelaLogin() {
 
@@ -7,10 +12,9 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 
 return (
-  <div className="container">
-    <div className="container-login">
-      <div className="wrap-login">
-        <form className="login-form">
+    <LayoutContainer>
+      <div className="wrap-a">
+        <form className="a-form">
 
           <div className="wrap-input">
             <input
@@ -32,20 +36,19 @@ return (
             <div className="focus-input" data-placeholder="Password"></div>
           </div>
 
-          <div className="container-login-form-btn">
-            <button className="login-form-btn">Login</button>
+          <div className="container-a-form-btn">
+            <button className="a-form-btn">Login</button>
           </div>
 
           <div className="text-center">
             <div className="txt1">Não possui conta? </div>
-            <a className="txt2" href="https://www.youtube.com/">
+            <Link className="txt2" to="/register">
               Criar conta
-            </a>
+            </Link>
           </div>
         </form>
       </div>
-    </div>
-  </div>
+    </LayoutContainer>
 );
 
 };

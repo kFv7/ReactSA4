@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TelaLogin from "./screens/login/TelaLogin"
-import TelaCadastro from './screens/register/TelaCadastro';
+import App from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TelaCadastro />
-    <TelaLogin />
+    <App/>
   </React.StrictMode>
 );

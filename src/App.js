@@ -1,8 +1,8 @@
-import TelaCadastro from "./screens/register/TelaCadastro";
+import IndexRoutes from '../src/routes/index.js';
 
 function App() {
   return(
-    TelaCadastro()    
+      IndexRoutes()
   )
 }
 

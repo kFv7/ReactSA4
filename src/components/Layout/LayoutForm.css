@@ -1,0 +1,20 @@
+  .wrap-a {
+    width: 390px;
+    background-color: #F5F7F8;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0);
+  }
+  
+  .a-form {
+    width: 100%;
+  }
+  
+  .a-form-title {
+    display: block;
+    font-size: 30px;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+  }

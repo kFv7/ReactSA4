@@ -1,5 +1,10 @@
-import "./TelaCadastroStyle.css";
+import { Link } from "react-router-dom";
 import { useState } from 'react';
+import '../../components/Input/InputGlobal.css'
+import '../../components/Button/ButtonGlobal.css'
+import '../../components/Layout/LayoutForm.css'
+import '../../components/Layout/LayoutContainer.js'
+import LayoutContainer from "../../components/Layout/LayoutContainer.js";
 
 function TelaCadastro(){
     
@@ -9,10 +14,9 @@ function TelaCadastro(){
     const [password, setPassword] = useState("");
     
     return (
-      <div className="container">
-        <div className="container-cadastro">
-          <div className="wrap-cadastro">
-            <form className="cadastro-form">
+        <LayoutContainer>
+          <div className="wrap-a">
+            <form className="a-form">
 
               <div className="wrap-input">
                 <input
@@ -54,20 +58,19 @@ function TelaCadastro(){
                 <div className="focus-input" data-placeholder="Password"></div>
               </div>
     
-              <div className="container-cadastro-form-btn">
-                <button className="cadastro-form-btn">Cadastro</button>
+              <div className="container-a-form-btn">
+                <button className="a-form-btn">Cadastro</button>
               </div>
     
               <div className="text-center">
                 <div className="txt1">Possui conta? </div>
-                <a className="txt2" href="https://www.youtube.com/">
+                <Link className="txt2" to="/login">
                   Criar conta
-                </a>
+                </Link>
               </div>
             </form>
           </div>
-        </div>
-      </div>
+        </LayoutContainer>
     );
 };
 
