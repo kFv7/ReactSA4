@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import '../../components/Input/InputGlobal.css'
 import '../../components/Button/ButtonGlobal.css'
-import '../../components/Layout/LayoutForm.css'
-import '../../components/Layout/LayoutContainer.js'
-import LayoutContainer from "../../components/Layout/LayoutContainer.js";
+import LayoutForm from "../../components/Layout/LayoutForm.js";
 
 function TelaLogin() {
 
@@ -12,10 +10,7 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 
 return (
-    <LayoutContainer>
-      <div className="wrap-a">
-        <form className="a-form">
-
+    <LayoutForm>
           <div className="wrap-input">
             <input
               className={email !== "" ? "has-val input" : "input"}
@@ -46,10 +41,8 @@ return (
               Criar conta
             </Link>
           </div>
-        </form>
-      </div>
-    </LayoutContainer>
-);
+    </LayoutForm>
+  );
 
 };
 

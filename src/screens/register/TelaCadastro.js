@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from 'react';
 import '../../components/Input/InputGlobal.css'
 import '../../components/Button/ButtonGlobal.css'
-import '../../components/Layout/LayoutForm.css'
-import '../../components/Layout/LayoutContainer.js'
-import LayoutContainer from "../../components/Layout/LayoutContainer.js";
+import LayoutForm from "../../components/Layout/LayoutForm.js";
 
 function TelaCadastro(){
     
@@ -14,10 +12,7 @@ function TelaCadastro(){
     const [password, setPassword] = useState("");
     
     return (
-        <LayoutContainer>
-          <div className="wrap-a">
-            <form className="a-form">
-
+          <LayoutForm>
               <div className="wrap-input">
                 <input
                   className={name !== "" ? "has-val input" : "input"}
@@ -68,9 +63,8 @@ function TelaCadastro(){
                   Criar conta
                 </Link>
               </div>
-            </form>
-          </div>
-        </LayoutContainer>
+          </LayoutForm>
+
     );
 };
 
