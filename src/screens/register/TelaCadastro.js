@@ -60,11 +60,10 @@ function TelaCadastro(){
               <div className="text-center">
                 <div className="txt1">Possui conta? </div>
                 <Link className="txt2" to="/login">
-                  Criar conta
+                  Logar
                 </Link>
               </div>
           </LayoutForm>
-
     );
 };
 

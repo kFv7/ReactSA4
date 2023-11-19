@@ -1,10 +1,35 @@
+import './TelaHomeStyle.css';
+import React from 'react';
+import { Link } from "react-router-dom";
+
 function TelaHome(){
     return (
-        <div>
+        <container>
 
-            <h1>Tela TelaHome</h1>
+            <header>
+                <Link to="/home">
+                <img src='images/a.png'></img>
+                </Link>
 
-        </div>
+                <input className='input' placeholder='Buscar' ></input>
+
+
+
+                <button>Adicionar Coisas</button>
+
+            </header>
+
+
+            <main>
+
+                <p>Aqui vai o conteúdo ou componente para armazenar informações.</p>
+            </main>
+
+
+            <footer>
+                <p>Informações do site</p>
+            </footer>
+        </container>
     )
 }
 

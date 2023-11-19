@@ -9,7 +9,7 @@ function IndexRoutes(){
             <Routes>
                 <Route path='/login' element={<TelaLogin />}/>
                 <Route path='/register' element={<TelaCadastro />}/>
-                <Route path='/' element={<TelaHome />}/>
+                <Route path='/home' element={<TelaHome />}/>
             </Routes>
         </Router> 
     )
