@@ -68,13 +68,13 @@
   
   *::-webkit-scrollbar-thumb {
     border-radius: 0px;
-    background: linear-gradient(to left, #C08261, #9A3B3B);;
+    background: linear-gradient(to left, #B931FC, #5D12D2);;
   }
   
   *::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to left, #C08261, #9A3B3B);;
+    background: linear-gradient(to left, #B931FC, #5D12D2);;
   }
   
   *::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(to left, #C08261, #9A3B3B);;
+    background: linear-gradient(to left, #B931FC, #5D12D2);;
   }

@@ -11,7 +11,7 @@
     box-sizing: border-box;
   }
   
-  header {
+  .header {
     background-color: #333;
     color: white;
     padding: 10px;
@@ -20,28 +20,13 @@
     align-items: center;
    
   }
-  
-  header img {
-    width: 100px; 
-    height: auto;
-    cursor: pointer;
-  }
-  
-  header button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    margin-left: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
+
   .middle {
     border-top: 0.4px solid #FFF2E7;
     padding: 20px;
   }
   
-  footer {
+  .footer {
     background-color: #333;
     color: white;
     text-align: center;
@@ -49,16 +34,4 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
-
-   .input-home {
-    font-size: 15px;
-    color: black;
-    border: none;
-    display: block;
-    width: 10%;
-    height: 40px;
-    background-color: white;
-    padding: 5px;
-    border-radius: 5%;
   }

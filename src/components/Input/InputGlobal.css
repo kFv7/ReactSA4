@@ -41,10 +41,10 @@
     -moz-transition: all 0.4s;
     transition: all 0.4s;
     background: #6a7dfe;
-    background: -webkit-linear-gradient(to left, #C08261, #9A3B3B);
-    background: -o-linear-gradient(to left, #C08261, #9A3B3B);
-    background: -moz-linear-gradient(to left, #C08261, #9A3B3B);
-    background: linear-gradient(to left, #C08261, #9A3B3B);
+    background: -webkit-linear-gradient(to left, #B931FC, #5D12D2);
+    background: -o-linear-gradient(to left, #B931FC, #5D12D2);
+    background: -moz-linear-gradient(to left, #B931FC, #5D12D2);
+    background: linear-gradient(to left, #B931FC, #5D12D2);
   }
   
   .focus-input::after {

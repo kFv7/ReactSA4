@@ -11,7 +11,7 @@ function TelaHome(){
                 <img src='images/a.png'></img>
                 </Link>
 
-                <input className='input' placeholder='Buscar' ></input>
+                <input className='input-home' placeholder='Buscar' ></input>
 
 
 
@@ -20,10 +20,10 @@ function TelaHome(){
             </header>
 
 
-            <main>
+            <middle>
 
                 <p>Aqui vai o conteúdo ou componente para armazenar informações.</p>
-            </main>
+            </middle>
 
 
             <footer>
