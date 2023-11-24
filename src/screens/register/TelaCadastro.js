@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState } from 'react';
-import '../../components/Input/InputGlobal.css'
-import '../../components/Button/ButtonGlobal.css'
+import '../../components/Input/InputGlobal.css';
+import '../../components/Button/ButtonGlobal.css';
 import LayoutForm from "../../components/Layout/LayoutForm.js";
+import axios from "axios";
 
 function TelaCadastro(){
     
@@ -10,6 +11,10 @@ function TelaCadastro(){
     const [email, setEmail] = useState("");
     const [cpf, setCpf] = useState("");
     const [password, setPassword] = useState("");
+
+    const RegistrarUser = async() => {
+      const response = await axios.post("http://localhost:8080/users", {name, email, "CPF": cpf, password})
+    }
     
     return (
           <LayoutForm>
@@ -54,7 +59,7 @@ function TelaCadastro(){
               </div>
     
               <div className="container-a-form-btn">
-                <button className="a-form-btn">Cadastro</button>
+                <button className="a-form-btn" onClick={RegistrarUser}>Cadastro</button>
               </div>
     
               <div className="text-center">

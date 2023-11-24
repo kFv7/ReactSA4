@@ -8,7 +8,7 @@ function TelaHome(){
 
             <header>
                 <Link to="/home">
-                <img src='images/a.png'></img>
+                <img src='images/a.jpeg'></img>
                 </Link>
 
                 <input className='input-home' placeholder='Buscar' ></input>

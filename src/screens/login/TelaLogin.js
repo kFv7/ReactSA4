@@ -3,20 +3,29 @@ import React, { useState } from 'react';
 import '../../components/Input/InputGlobal.css'
 import '../../components/Button/ButtonGlobal.css'
 import LayoutForm from "../../components/Layout/LayoutForm.js";
+import axios from "axios";
+import TelaHome from "../home/TelaHome";
 
 function TelaLogin() {
 
-const [email, setEmail] = useState("");
+const [login, setLogin] = useState("");
 const [password, setPassword] = useState("");
+
+const LoginUser = async (e) => {
+  e.preventDefault()
+    const responseLogin = await axios.post("http://localhost:8080/login", {login, password})
+    localStorage.setItem("token", responseLogin.data.token)
+    TelaHome()
+}
 
 return (
     <LayoutForm>
           <div className="wrap-input">
             <input
-              className={email !== "" ? "has-val input" : "input"}
+              className={login !== "" ? "has-val input" : "input"}
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={login}
+              onChange={(e) => setLogin(e.target.value)}
             />
             <div className="focus-input" data-placeholder="Email"></div>
           </div>
@@ -32,7 +41,7 @@ return (
           </div>
 
           <div className="container-a-form-btn">
-            <button className="a-form-btn">Login</button>
+            <button className="a-form-btn" onClick={LoginUser}>Login</button>
           </div>
 
           <div className="text-center">
