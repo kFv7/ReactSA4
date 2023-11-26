@@ -2,12 +2,17 @@ import { useState } from 'react';
 import '../../components/Input/InputGlobal.css';
 import '../../components/Button/ButtonGlobal.css';
 import LayoutForm from "../../components/Layout/LayoutForm";
+import axios from 'axios';
 
 function TelaReservation() {
     const [checkin, setCheckin] = useState("");
     const [checkout, setCheckout] = useState("");
     const [reserveStatus, setReserveStatus] = useState("");
     const [rentalPrice, setRentalPrice] = useState("");
+
+    const RegisterReservation = async() => {
+      const response = await axios.post("http://localhost:8080/reservation", {checkin, checkout, reserveStatus, rentalPrice})
+    }
 
     return(
         <LayoutForm>
@@ -52,11 +57,8 @@ function TelaReservation() {
               </div>
 
               <div className="container-a-form-btn">
-                <button className="a-form-btn">Concluir Reserva</button>
+                <button className="a-form-btn" onClick={RegisterReservation}>Concluir Reserva</button>
               </div>
-
-
-
         </LayoutForm>
     )
 }

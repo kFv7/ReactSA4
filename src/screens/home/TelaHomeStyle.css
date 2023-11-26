@@ -1,4 +1,4 @@
-.container {
+container {
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
@@ -11,7 +11,7 @@
     box-sizing: border-box;
   }
   
-  .header {
+  header {
     background-color: #333;
     color: white;
     padding: 10px;
@@ -21,13 +21,13 @@
    
   }
   
-  .header img {
+  header img {
     width: 100px; 
     height: auto;
     cursor: pointer;
   }
   
-  .header button {
+  header button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -36,12 +36,12 @@
     cursor: pointer;
   }
   
-  .middle {
+  middle {
     border-top: 0.4px solid #FFF2E7;
     padding: 20px;
   }
   
-  .footer {
+  footer {
     background-color: #333;
     color: white;
     text-align: center;
@@ -49,16 +49,4 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
-
-   .input-home {
-    font-size: 15px;
-    color: black;
-    border: none;
-    display: block;
-    width: 10%;
-    height: 40px;
-    background-color: white;
-    padding: 5px;
-    border-radius: 5%;
   }

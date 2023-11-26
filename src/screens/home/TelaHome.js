@@ -8,12 +8,10 @@ function TelaHome(){
 
             <header>
                 <Link to="/home">
-                <img src='images/a.jpeg'></img>
+                <img src='images/a.jpeg' ></img>
                 </Link>
 
                 <input className='input-home' placeholder='Buscar' ></input>
-
-
 
                 <button>Adicionar Coisas</button>
 
