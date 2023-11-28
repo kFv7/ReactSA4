@@ -1,21 +1,25 @@
-import { Link, redirect, useHref } from "react-router-dom";
+import { Link, Navigate} from "react-router-dom";
 import React, { useState } from 'react';
 import '../../components/Input/InputGlobal.css'
 import '../../components/Button/ButtonGlobal.css'
 import LayoutForm from "../../components/Layout/LayoutForm.js";
 import axios from "axios";
-import TelaHome from "../home/TelaHome";
 
 function TelaLogin() {
 
 const [login, setLogin] = useState("");
 const [password, setPassword] = useState("");
 
+    
+
 const LoginUser = async (e) => {
   e.preventDefault()
     const responseLogin = await axios.post("http://localhost:8080/login", {login, password})
     localStorage.setItem("token", responseLogin.data.token)
-    TelaHome()
+}
+
+if (LoginUser) {
+  return <Navigate to="/home"/>
 }
 
 return (

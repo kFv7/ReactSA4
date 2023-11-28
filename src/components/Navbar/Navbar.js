@@ -1,11 +1,21 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useNavigate } from 'react-router-dom';
+import { useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavScrollExample() {
+  const navigate = useNavigate();
+
+
+  const handleLogout = () => {
+    localStorage.removeItem('token'); 
+
+  navigate('/login');
+   };
+ 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
@@ -29,20 +39,14 @@ function NavScrollExample() {
             <Nav.Link href="register">Cadastro</Nav.Link>
             <Nav.Link href="login">Login</Nav.Link>
             <Nav.Link href="reservation">Reserva</Nav.Link>
+            <Nav.Link href="login">Logout</Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Pesquisar"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">pesquisar</Button>
-          </Form>
+            <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
 
 export default NavScrollExample;

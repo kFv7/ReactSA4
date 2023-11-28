@@ -10,9 +10,6 @@ function TelaHome(){
                 <NavScrollExample/>
             </header>
 
-            <middle>
-                
-            </middle>
 
             <footer>
                 <AlignmentExample/>
