@@ -1,7 +1,7 @@
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function AlignmentExample() {
+function NavbarDown() {
   return (
     <>
       <Nav className="justify-content-center" activeKey="/home">
@@ -23,4 +23,4 @@ function AlignmentExample() {
   );
 }
 
-export default AlignmentExample;
+export default NavbarDown;

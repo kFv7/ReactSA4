@@ -3,6 +3,7 @@ import '../../components/Input/InputGlobal.css';
 import '../../components/Button/ButtonGlobal.css';
 import LayoutForm from "../../components/Layout/LayoutForm";
 import axios from 'axios';
+import NavbarLoReg from "../../components/Navbar/NavbarLoReg.js";
 
 function TelaReservation() {
     const [checkin, setCheckin] = useState("");
@@ -15,6 +16,8 @@ function TelaReservation() {
     }
 
     return(
+      <container-test>
+        <NavbarLoReg/>
         <LayoutForm>
               <div className="wrap-input">
                 <input
@@ -57,9 +60,10 @@ function TelaReservation() {
               </div>
 
               <div className="container-a-form-btn">
-                <button className="a-form-btn" onClick={RegisterReservation}>Concluir Reserva</button>
+                <button className="a-form-btn" onClick={RegisterReservation}>Concluir Anuncio</button>
               </div>
         </LayoutForm>
+      </container-test>  
     )
 }
 

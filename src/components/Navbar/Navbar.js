@@ -3,31 +3,29 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate } from 'react-router-dom';
-import { useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function NavScrollExample() {
+function NavbarHeader() {
   const navigate = useNavigate();
-
 
   const handleLogout = () => {
     localStorage.removeItem('token'); 
 
-  navigate('/login');
+    return navigate('/login');
    };
  
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">            
+        <Navbar.Brand href="/home">            
         <img
               src="/Images/a.jpeg"
-              width="35"
-              height="35"
+              width="50"
+              height="50"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
-</Navbar.Brand>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -35,11 +33,9 @@ function NavScrollExample() {
             style={{ maxHeight: '200px' }}
             navbarScroll
           >
-            <Nav.Link href="home">Home</Nav.Link>
-            <Nav.Link href="register">Cadastro</Nav.Link>
-            <Nav.Link href="login">Login</Nav.Link>
-            <Nav.Link href="reservation">Reserva</Nav.Link>
-            <Nav.Link href="login">Logout</Nav.Link>
+            <Nav.Link href="register">Cadastrar-se</Nav.Link>
+            <Nav.Link href="login">Entrar</Nav.Link>
+            <Nav.Link href="reservation">Anuncie seu espaço</Nav.Link>
           </Nav>
             <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
         </Navbar.Collapse>
@@ -49,4 +45,4 @@ function NavScrollExample() {
 }
 
 
-export default NavScrollExample;
+export default NavbarHeader;

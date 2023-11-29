@@ -1,5 +1,5 @@
-import AlignmentExample from '../../components/Navbar/NavbarDown';
-import NavScrollExample from '../../components/Navbar/Navbar';
+import NavbarDown from '../../components/Navbar/NavbarDown';
+import NavbarHeader from '../../components/Navbar/Navbar';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -7,12 +7,15 @@ function TelaHome(){
     return (
         <container>
             <header>
-                <NavScrollExample/>
+                <NavbarHeader/>
             </header>
 
+            <middle>
+
+            </middle>
 
             <footer>
-                <AlignmentExample/>
+                <NavbarDown/>
             </footer>
 
         </container>

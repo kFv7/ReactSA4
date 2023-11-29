@@ -4,6 +4,7 @@ import '../../components/Input/InputGlobal.css';
 import '../../components/Button/ButtonGlobal.css';
 import LayoutForm from "../../components/Layout/LayoutForm.js";
 import axios from "axios";
+import NavbarLoReg from "../../components/Navbar/NavbarLoReg.js";
 
 function TelaCadastro(){
     
@@ -17,6 +18,8 @@ function TelaCadastro(){
     }
     
     return (
+      <container-test>
+        <NavbarLoReg/>
           <LayoutForm>
               <div className="wrap-input">
                 <input
@@ -59,16 +62,17 @@ function TelaCadastro(){
               </div>
     
               <div className="container-a-form-btn">
-                <button className="a-form-btn" onClick={RegistrarUser}>Cadastro</button>
+                <button className="a-form-btn" onClick={RegistrarUser}>Concluir Cadastro</button>
               </div>
     
               <div className="text-center">
                 <div className="txt1">Possui conta? </div>
                 <Link className="txt2" to="/login">
-                  Logar
+                  Entrar
                 </Link>
               </div>
           </LayoutForm>
+        </container-test>
     );
 };
 

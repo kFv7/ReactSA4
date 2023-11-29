@@ -78,3 +78,12 @@
   *::-webkit-scrollbar-thumb:active {
     background: linear-gradient(to left, #B931FC, #5D12D2);;
   }
+
+  .login-form-title {
+    display:block;
+    text-align: center;
+  }
+  
+  .login-form-title img {
+    width: 90px;
+  }

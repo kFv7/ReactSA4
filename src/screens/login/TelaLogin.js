@@ -1,28 +1,30 @@
-import { Link, Navigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 import React, { useState } from 'react';
 import '../../components/Input/InputGlobal.css'
 import '../../components/Button/ButtonGlobal.css'
 import LayoutForm from "../../components/Layout/LayoutForm.js";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import NavbarLoReg from "../../components/Navbar/NavbarLoReg.js";
 
 function TelaLogin() {
 
 const [login, setLogin] = useState("");
 const [password, setPassword] = useState("");
-
+const navigate = useNavigate();
     
 
 const LoginUser = async (e) => {
   e.preventDefault()
     const responseLogin = await axios.post("http://localhost:8080/login", {login, password})
     localStorage.setItem("token", responseLogin.data.token)
+    return navigate('/home');
 }
 
-if (LoginUser) {
-  return <Navigate to="/home"/>
-}
 
 return (
+  <container-test>
+    <NavbarLoReg/>
     <LayoutForm>
           <div className="wrap-input">
             <input
@@ -45,7 +47,7 @@ return (
           </div>
 
           <div className="container-a-form-btn">
-            <button className="a-form-btn" onClick={LoginUser}>Login</button>
+            <button className="a-form-btn" onClick={LoginUser}>Entrar</button>
           </div>
 
           <div className="text-center">
@@ -55,6 +57,8 @@ return (
             </Link>
           </div>
     </LayoutForm>
+    </container-test>
+
   );
 
 };
