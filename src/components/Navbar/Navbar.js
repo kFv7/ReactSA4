@@ -35,7 +35,8 @@ function NavbarHeader() {
           >
             <Nav.Link href="register">Cadastrar-se</Nav.Link>
             <Nav.Link href="login">Entrar</Nav.Link>
-            <Nav.Link href="reservation">Anuncie seu espaço</Nav.Link>
+            <Nav.Link href="announcementAp">Anuncie seu espaço</Nav.Link>
+            <Nav.Link href="reservation">Reserve seu espaço</Nav.Link>
           </Nav>
             <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
         </Navbar.Collapse>
