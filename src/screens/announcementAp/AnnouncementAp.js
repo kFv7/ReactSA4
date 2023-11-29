@@ -15,7 +15,7 @@ function AnnouncementAp() {
     const navigate = useNavigate();
 
     const RegisterAnnouncementAp = async () => {
-        const response = await axios.post("http://localhost:8080/Apartments", {address, rentalPrice, bathroomNumber, bedroomsNumber, size});
+        const response = await axios.post("http://localhost:8080/apartments", {address, rentalPrice, bathroomNumber, bedroomsNumber, size});
         return navigate('/home');
     }
 
